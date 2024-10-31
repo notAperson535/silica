@@ -1,0 +1,13 @@
+diff --git a/browser/themes/shared/jar.inc.mn b/browser/themes/shared/jar.inc.mn
+index 24f4fad868c2b1020f69ee6df2bab1a468aaddb4..1233797ad65a2861c54ae0dd18daf3fd9289742b 100644
+--- a/browser/themes/shared/jar.inc.mn
++++ b/browser/themes/shared/jar.inc.mn
+@@ -7,6 +7,8 @@
+ # be specified once. As a result, the source file paths are relative
+ # to the location of the actual manifest.
+ 
++#include ../silica/jar.inc.mn
++
+   skin/classic/browser/aboutFrameCrashed.css                   (../shared/aboutFrameCrashed.css)
+   skin/classic/browser/aboutRestartRequired.css                (../shared/aboutRestartRequired.css)
+   skin/classic/browser/aboutSessionRestore.css                 (../shared/aboutSessionRestore.css)

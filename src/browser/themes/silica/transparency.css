@@ -1,0 +1,62 @@
+/* UserChrome.css */
+
+#sidebar-main,
+#sidebar-box {
+  background-color: transparent !important;
+  background-image: none !important;
+}
+
+#navigator-toolbox {
+  background-color: transparent !important;
+  border-bottom: none !important;
+}
+
+#main-window {
+  background-color: transparent !important;
+}
+
+#PersonalToolbar {
+  background-color: transparent !important;
+}
+
+#nav-bar {
+  border-top: none !important;
+}
+
+#nav-bar {
+  background-color: transparent !important;
+}
+
+/* Search box transparency */
+#urlbar {
+  --toolbar-field-background-color: transparent !important;
+}
+
+/* Fixing window control buttons */
+#navigator-toolbox .titlebar-min .toolbarbutton-icon,
+#navigator-toolbox .titlebar-restore .toolbarbutton-icon,
+#navigator-toolbox .titlebar-max .toolbarbutton-icon {
+  opacity: 0;
+}
+
+/* Fixing window control buttons, could need a change with different resolutions or windows scaling */
+#navigator-toolbox .titlebar-buttonbox-container {
+  height: 28px;
+}
+
+/* Fixing window control buttons, could need a change with different resolutions or windows scaling */
+:root[sizemode="maximized"]
+  #navigator-toolbox
+  .titlebar-close
+  .toolbarbutton-icon {
+  /*   opacity:0; */
+  margin-right: 2px !important;
+}
+
+/* Remove the white line around the content window */
+@media (-moz-bool-pref: "sidebar.revamp") {
+  #tabbrowser-tabbox {
+    outline: none !important;
+    /*     box-shadow: none !important; */
+  }
+}

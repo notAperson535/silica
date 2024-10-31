@@ -1,0 +1,21 @@
+{
+  "name": "Silica Browser",
+  "vendor": "notAperson535",
+  "appId": "com.notaperson535.silica",
+  "binaryName": "silica",
+  "version": {
+    "product": "firefox",
+    "version": "132.0"
+  },
+  "buildOptions": {
+    "windowsUseSymbolicLinks": false
+  },
+  "addons": {},
+  "brands": {},
+  "license": {
+    "ignoredFiles": [
+      ".*\\.json"
+    ],
+    "licenseType": "MPL-2.0"
+  }
+}

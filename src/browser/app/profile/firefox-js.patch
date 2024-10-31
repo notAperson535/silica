@@ -1,0 +1,32 @@
+diff --git a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
+index c5f7cf3a3bf104468580c3ab5b111e8cdfab4c83..9175fdd4327d21874fda6881f62a962b80a897f4 100644
+--- a/browser/app/profile/firefox.js
++++ b/browser/app/profile/firefox.js
+@@ -2472,13 +2472,20 @@ pref("browser.migrate.interactions.passwords", false);
+ 
+ pref("browser.migrate.preferences-entrypoint.enabled", true);
+ 
+-pref("extensions.pocket.api", "api.getpocket.com");
+-pref("extensions.pocket.bffApi", "firefox-api-proxy.cdn.mozilla.net");
+-pref("extensions.pocket.bffRecentSaves", true);
+-pref("extensions.pocket.enabled", true);
+-pref("extensions.pocket.oAuthConsumerKey", "40249-e88c401e1b1f2242d9e441c4");
+-pref("extensions.pocket.oAuthConsumerKeyBff", "94110-6d5ff7a89d72c869766af0e0");
+-pref("extensions.pocket.site", "getpocket.com");
++// pref("extensions.pocket.api", "api.getpocket.com");
++pref("extensions.pocket.api", "");
++// pref("extensions.pocket.bffApi", "firefox-api-proxy.cdn.mozilla.net");
++// pref("extensions.pocket.bffRecentSaves", true);
++pref("extensions.pocket.enabled", false);
++// pref("extensions.pocket.oAuthConsumerKey", "40249-e88c401e1b1f2242d9e441c4");
++pref("extensions.pocket.oAuthConsumerKey", "");
++// pref("extensions.pocket.oAuthConsumerKeyBff", "94110-6d5ff7a89d72c869766af0e0");
++// pref("extensions.pocket.site", "getpocket.com");
++pref("extensions.pocket.site", "");
++user_pref(
++  'browser.newtabpage.activity-stream.section.highlights.includePocket',
++  false
++)
+ 
+ // Enable Pocket button home panel for non link pages.
+ pref("extensions.pocket.showHome", true);

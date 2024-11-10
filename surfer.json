@@ -5,13 +5,31 @@
   "binaryName": "silica",
   "version": {
     "product": "firefox",
-    "version": "132.0"
+    "version": "132.0.1"
   },
   "buildOptions": {
     "windowsUseSymbolicLinks": false
   },
   "addons": {},
-  "brands": {},
+  "brands": {
+    "stable": {
+      "backgroundColor": "#FFF9E8",
+      "brandShorterName": "Silica",
+      "brandShortName": "Silica Browser",
+      "brandFullName": "Silica Browser",
+      "release": {
+        "displayVersion": "1.0.0",
+        "github": {
+          "repo": "notaperson535/silica"
+        },
+        "x86": {
+          "windowsMar": "windows.mar",
+          "macosMar": "macosIntel.mar",
+          "linuxMar": "linux.mar"
+        }
+      }
+    }
+  },
   "license": {
     "ignoredFiles": [
       ".*\\.json"

@@ -1,35 +1,35 @@
-<div align="center">
+# Silica
 
-# Surfer
+A visionOS themed firefox fork!
 
-Build Firefox-based browsers with ease
+## Building
 
-**This is still in a prerelease / prototype phase. Changes will be made, things will be broken**
+Install dependencies
 
-</div>
-
-## Installation
-
-```sh
-npm install @zen-browser/surfer
+```
+npm i
 ```
 
-## Documentation
+Download and bootstrap the browser
 
-Documentation is available on [docs.gluon.dev](https://docs.gluon.dev) or in the docs folder of this repository.
+```
+npm run init
+```
 
-## Licencing notes
+Run bootstrap to identify and fix potential errors
 
-The following is included in good faith. The writer is not a lawyer, and this is not legal advice.
+```
+npm run bootstrap
+```
 
-### Gluon and Melon
+Start building the browser
 
-Surfer is a fork of [Gluon](https://github.com/pulse-browser/gluon) but the author has stoped working on it. Gluon has been extracted from melon, the build tool for the [desktop version of Dot Browser](https://github.com/dothq/browser-desktop) under MPL v2.0.
+```
+npm run build
+```
 
-This Source Code Form is subject to the terms of the Mozilla Public
-License, v. 2.0. If a copy of the MPL was not distributed with this
-file, You can obtain one at http://mozilla.org/MPL/2.0/.
+Finally, run the browser!
 
-### Firefox
-
-This program downloads and modifies Firefox. [Follow their license](https://hg.mozilla.org/mozilla-central/file/tip/LICENSE) when distributing your program.
+```
+npm start
+```

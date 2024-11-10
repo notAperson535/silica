@@ -7,4 +7,4 @@
 # be specified once. As a result, the source file paths are relative
 # to the location of the actual manifest.
 
-  skin/classic/browser/silica/transparency.css   (../silica/transparency.css)
+  skin/classic/browser/silica/theme.css   (../silica/theme.css)

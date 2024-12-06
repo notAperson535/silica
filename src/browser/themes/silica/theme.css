@@ -1,3 +1,71 @@
+:root {
+  --button-background-color-hover: rgba(255, 255, 255, 0.4) !important;
+  --button-background-color-active: rgba(255, 255, 255, 0.5) !important;
+
+  /* Make dark and light the same */
+  --tab-selected-bgcolor: rgba(255, 255, 255, 0.2) !important;
+  --tab-selected-textcolor: rgb(255, 255, 255) !important;
+  --toolbarbutton-icon-fill: rgb(251, 251, 254) !important;
+
+  --toolbar-field-color: rgb(
+    251,
+    251,
+    254
+  ) !important; /* url bar text/icon color */
+}
+
+html {
+  background: light-dark(
+    rgba(0, 0, 0, 0.35),
+    rgba(255, 255, 255, 0.35)
+  ) !important;
+}
+
+#tabbrowser-tabs {
+  margin-right: 20px;
+}
+
+.tabbrowser-tab {
+  transition: 0.15s !important;
+  color: white !important;
+  color-scheme: dark !important;
+  max-width: 100% !important;
+  margin: 0.25em;
+}
+
+.tabbrowser-tab:first-of-type {
+  margin-left: 6px !important;
+}
+
+.tab-background {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+  border-radius: 50px;
+  outline: none !important;
+  outline-offset: 0 !important;
+  box-shadow: none !important;
+}
+
+.tabbrowser-tab:hover {
+  scale: 1.01;
+}
+
+.tabbrowser-tab:active {
+  scale: 0.99;
+}
+
+/* Placeholder text white */
+#urlbar-input::placeholder {
+  color: white !important;
+}
+
+/* Make navbar transparent */
+.browser-toolbar {
+  &:not(.titlebar-color) {
+    background-color: transparent !important;
+  }
+}
+
+/* Left margin fix for navbar customizable target */
 #nav-bar-customization-target {
   & > :is(toolbarbutton, toolbaritem):first-child,
   & > toolbarpaletteitem:first-child > :is(toolbarbutton, toolbaritem) {
@@ -6,13 +74,62 @@
   }
 }
 
-#nav-bar toolbarbutton,
-#nav-bar toolbaritem > toolbarbutton {
+/* Rounded buttons for navbar */
+
+#nav-bar > #nav-bar-customization-target toolbarbutton,
+#nav-bar > toolbaritem > toolbarbutton {
   border-radius: 20px;
   overflow: hidden;
   padding: 0 !important;
-  margin: auto var(--toolbarbutton-outer-padding);
+  margin: auto calc(var(--toolbarbutton-outer-padding) * 2);
 }
+
+/* navbar button customization */
+
+#nav-bar > #nav-bar-customization-target > toolbarbutton[disabled] {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+#nav-bar > #nav-bar-customization-target > toolbarbutton:not([disabled]),
+#nav-bar toolbaritem:not(#urlbar-container) {
+  transition: 0.15s !important;
+}
+
+#nav-bar > #nav-bar-customization-target > toolbarbutton:not([disabled]),
+#nav-bar toolbaritem > toolbarbutton {
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+#nav-bar > #nav-bar-customization-target > toolbarbutton:hover:not([disabled]),
+#nav-bar toolbaritem:not(#urlbar-container):hover {
+  scale: 1.1;
+}
+
+#nav-bar > #nav-bar-customization-target > toolbarbutton:active:not([disabled]),
+#nav-bar toolbaritem:not(#urlbar-container):active {
+  scale: 0.9;
+}
+
+#urlbar-background {
+  background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.1) 100%
+    ),
+    rgba(0, 0, 0, 0.3) !important;
+  background-blend-mode: luminosity, color-burn;
+  box-shadow: 0 -0.5px 1px 0 rgba(255, 255, 255, 0.3) inset,
+    0 -0.5px 1px 0 rgba(255, 255, 255, 0.25) inset,
+    1px 1.5px 4px 0 rgba(0, 0, 0, 0.08) inset,
+    1px 1.5px 4px 0 rgba(0, 0, 0, 0.1) inset !important;
+}
+
+#urlbar-background,
+#searchbar {
+  border-radius: calc(var(--urlbar-height) / 2);
+}
+
+/* Right margin fix for navbar menu button */
 
 #PanelUI-menu-button {
   padding-inline-end: 0 !important;

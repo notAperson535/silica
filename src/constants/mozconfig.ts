@@ -48,7 +48,7 @@ ac_add_options --with-branding=browser/branding/${brand}
 ac_add_options --enable-unverified-updates
 ac_add_options --enable-update-channel=${brand}
 
-export ZEN_FIREFOX_VERSION=${config.version.version}
+export SILICA_FIREFOX_VERSION=${config.version.version}
 export MOZ_APPUPDATE_HOST=${
     config.updateHostname || 'localhost:7648 # This should not resolve'
   }

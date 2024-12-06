@@ -4,8 +4,8 @@
   "appId": "com.notaperson535.silica",
   "binaryName": "silica",
   "version": {
-    "product": "firefox",
-    "version": "132.0.1"
+    "product": "firefox-beta",
+    "version": "134.0b2"
   },
   "buildOptions": {
     "windowsUseSymbolicLinks": false
@@ -18,7 +18,7 @@
       "brandShortName": "Silica Browser",
       "brandFullName": "Silica Browser",
       "release": {
-        "displayVersion": "1.0.0",
+        "displayVersion": "0.0.1",
         "github": {
           "repo": "notaperson535/silica"
         },

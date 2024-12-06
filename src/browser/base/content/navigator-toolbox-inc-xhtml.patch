@@ -1,0 +1,22 @@
+diff --git a/browser/base/content/navigator-toolbox.inc.xhtml b/browser/base/content/navigator-toolbox.inc.xhtml
+index eb2d8670874bd5bcaf9253caafb98444cb8cfcd9..92af1ee39b412261626da400e264b659e0859748 100644
+--- a/browser/base/content/navigator-toolbox.inc.xhtml
++++ b/browser/base/content/navigator-toolbox.inc.xhtml
+@@ -30,8 +30,6 @@
+            context="toolbar-context-menu"
+            flex="1">
+ 
+-    <hbox class="titlebar-spacer" type="pre-tabs"/>
+-
+     <hbox flex="1" align="end" class="toolbar-items">
+       <toolbartabstop/>
+       <hbox id="TabsToolbar-customization-target" flex="1">
+@@ -95,8 +93,6 @@
+       </hbox>
+     </hbox>
+ 
+-    <hbox class="titlebar-spacer" type="post-tabs"/>
+-
+ #include private-browsing-indicator.inc.xhtml
+     <toolbarbutton id="content-analysis-indicator"
+                    class="toolbarbutton-1 content-analysis-indicator-icon"/>

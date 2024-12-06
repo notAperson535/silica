@@ -5,5 +5,6 @@
       "code": ":arrows_counterclockwise:",
       "description": "Update changelog"
     }
-  ]
+  ],
+  "editor.formatOnSave": false
 }

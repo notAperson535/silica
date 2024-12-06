@@ -1,0 +1,18 @@
+diff --git a/browser/components/preferences/preferences.js b/browser/components/preferences/preferences.js
+index bdfd45b6d5c2cf91e542fe31ed54b03545890de4..7defe6043fe5cdd956c22499e27df72635de2392 100644
+--- a/browser/components/preferences/preferences.js
++++ b/browser/components/preferences/preferences.js
+@@ -212,13 +212,6 @@ function init_all() {
+     register_module("paneExperimental", gExperimentalPane);
+   }
+ 
+-  NimbusFeatures.moreFromMozilla.recordExposureEvent({ once: true });
+-  if (NimbusFeatures.moreFromMozilla.getVariable("enabled")) {
+-    document.getElementById("category-more-from-mozilla").hidden = false;
+-    gMoreFromMozillaPane.option =
+-      NimbusFeatures.moreFromMozilla.getVariable("template");
+-    register_module("paneMoreFromMozilla", gMoreFromMozillaPane);
+-  }
+   // The Sync category needs to be the last of the "real" categories
+   // registered and inititalized since many tests wait for the
+   // "sync-pane-loaded" observer notification before starting the test.

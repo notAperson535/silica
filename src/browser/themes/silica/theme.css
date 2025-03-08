@@ -2,6 +2,10 @@
   --button-background-color-hover: rgba(255, 255, 255, 0.4) !important;
   --button-background-color-active: rgba(255, 255, 255, 0.5) !important;
 
+  /* Buttons inside url bar hover and active */
+  --urlbar-box-hover-bgcolor: rgba(255, 255, 255, 0.4);
+  --urlbar-box-active-bgcolor: rgba(255, 255, 255, 0.5);
+
   /* Make dark and light the same */
   --tab-selected-bgcolor: rgba(255, 255, 255, 0.2) !important;
   --tab-selected-textcolor: rgb(255, 255, 255) !important;
@@ -12,6 +16,9 @@
     251,
     254
   ) !important; /* url bar text/icon color */
+
+  /* Make buttons inside urlbar rounded */
+  --urlbar-icon-border-radius: 16px !important;
 }
 
 html {
@@ -21,6 +28,8 @@ html {
   ) !important;
 }
 
+/* Tab modifications */
+
 #tabbrowser-tabs {
   margin-right: 20px;
 }
@@ -29,7 +38,7 @@ html {
   transition: 0.15s !important;
   color: white !important;
   color-scheme: dark !important;
-  max-width: 100% !important;
+  /* max-width: 100% !important; */
   margin: 0.25em;
 }
 
@@ -38,19 +47,28 @@ html {
 }
 
 .tab-background {
-  background-color: rgba(255, 255, 255, 0.05) !important;
+  background-color: rgba(255, 255, 255, 0.05);
   border-radius: 50px;
   outline: none !important;
   outline-offset: 0 !important;
   box-shadow: none !important;
 }
 
-.tabbrowser-tab:hover {
-  scale: 1.01;
+.tabbrowser-tab {
+  &:hover{
+    scale: 1.05;
+  }
+  &:active{
+    scale: 0.95;
+  }
 }
 
-.tabbrowser-tab:active {
-  scale: 0.99;
+/* Tab close border radius */
+
+@media not (forced-colors) {
+  .close-icon:hover {
+    border-radius: var(--urlbar-icon-border-radius) !important;
+  }
 }
 
 /* Placeholder text white */
@@ -58,10 +76,16 @@ html {
   color: white !important;
 }
 
+/* Remove border around top section */
+#navigator-toolbox {
+  border-top: none !important;
+}
+
 /* Make navbar transparent */
 .browser-toolbar {
   &:not(.titlebar-color) {
     background-color: transparent !important;
+    border: none !important;
   }
 }
 
@@ -110,6 +134,8 @@ html {
   scale: 0.9;
 }
 
+/* url bar background */
+
 #urlbar-background {
   background: linear-gradient(
       0deg,
@@ -127,6 +153,90 @@ html {
 #urlbar-background,
 #searchbar {
   border-radius: calc(var(--urlbar-height) / 2);
+  border: none !important;
+}
+
+/* Url bar height adjust */
+
+#urlbar-container{
+  --urlbar-container-height: 45px !important;
+}
+
+#urlbar{
+  --urlbar-height: 37px !important;
+}
+
+/* Buttons inside url bar */
+
+.urlbar-input-container {
+  align-items: center;
+  padding: 0 5px !important;
+  --urlbar-container-height: 45px !important;
+}
+
+.identity-box-button, .urlbar-input-container > box{
+  transition: 0.15s !important;
+  outline: none !important;
+}
+
+.sharing-icon, #permissions-granted-icon, #tracking-protection-icon, #blocked-permissions-container > .blocked-permission-icon,
+.urlbar-input-container > box:not(#identity-box) > box,
+.urlbar-input-container > box > box > image  {
+  width: 14px !important;
+  height: 14px !important;
+}
+
+/* find icons inside url that are not the privacy icon nor invisible */
+
+.urlbar-input-container > box:not(#identity-box):has(> box):not([collapsed="true"]) {
+    padding-inline: 0 !important;
+    opacity: 0.6 !important;
+    padding: 5px !important;
+    margin: 0 2.5px !important;
+
+  &:hover{
+    scale: 1.1;
+  }
+  &:active{
+    scale: 0.9;
+  }
+}
+
+#identity-box {
+  margin: 0 2.5px !important;
+  align-items: center;
+
+  & > .identity-box-button{
+    height: 100%;
+
+    padding-inline: 0 !important;
+    padding: 5px !important;
+  }
+
+  &:hover{
+    scale: 1.025;
+  }
+  &:active{
+    scale: 0.975;
+  }
+
+  /* Check if it is just normal privacy icon on webpage */
+
+  &:has(> box > label[collapsed="true"]){
+    opacity: 0.6 !important;
+
+    &:hover{
+      scale: 1.1;
+    }
+
+    &:active{
+      scale: 0.9;
+    }
+  }
+}
+
+.urlbar-input-box{
+  margin: 0 2.5px !important;
 }
 
 /* Right margin fix for navbar menu button */

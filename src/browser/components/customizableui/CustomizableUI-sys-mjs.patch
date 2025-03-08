@@ -1,41 +1,36 @@
 diff --git a/browser/components/customizableui/CustomizableUI.sys.mjs b/browser/components/customizableui/CustomizableUI.sys.mjs
-index 989e69245aeb1185125752db6b9c58e462d554e4..7bee624856f2798eb11afb4e782c117419c1540c 100644
+index e6b9b7dcfab179e7552c146eb1551b45ad042266..80ebffbb27309baeb454d6a1fbb6ff284c61b2de 100644
 --- a/browser/components/customizableui/CustomizableUI.sys.mjs
 +++ b/browser/components/customizableui/CustomizableUI.sys.mjs
-@@ -323,7 +323,8 @@ var CustomizableUIInternal = {
-       "spring",
+@@ -317,7 +317,7 @@ var CustomizableUIInternal = {
+       "vertical-spacer",
        "urlbar-container",
        "spring",
 -      "save-to-pocket-button",
 +      // "save-to-pocket-button",
-+      "new-tab-button",
        "downloads-button",
        AppConstants.MOZ_DEV_EDITION ? "developer-button" : null,
        "fxa-toolbar-menu-button",
-@@ -337,9 +338,9 @@ var CustomizableUIInternal = {
+@@ -331,8 +331,8 @@ var CustomizableUIInternal = {
          overflowable: true,
          defaultPlacements: navbarPlacements,
          verticalTabsDefaultPlacements: [
 -          "firefox-view-button",
--          "new-tab-button",
 -          "alltabs-button",
 +          // "firefox-view-button",
-+          // "new-tab-button",
 +          // "alltabs-button",
          ],
          defaultCollapsed: false,
        },
-@@ -363,10 +364,10 @@ var CustomizableUIInternal = {
+@@ -356,10 +356,10 @@ var CustomizableUIInternal = {
        {
          type: CustomizableUI.TYPE_TOOLBAR,
          defaultPlacements: [
 -          "firefox-view-button",
--          "tabbrowser-tabs",
--          "new-tab-button",
--          "alltabs-button",
 +          // "firefox-view-button",
-+          // "tabbrowser-tabs",
-+          // "new-tab-button",
+           "tabbrowser-tabs",
+           "new-tab-button",
+-          "alltabs-button",
 +          // "alltabs-button",
          ],
          verticalTabsDefaultPlacements: [],

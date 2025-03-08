@@ -1,11 +1,12 @@
 {
   "name": "Silica Browser",
   "vendor": "notAperson535",
-  "appId": "com.notaperson535.silica",
+  "appId": "is-a.dev.notaperson535.silica",
   "binaryName": "silica",
   "version": {
-    "product": "firefox-beta",
-    "version": "134.0b2"
+    "product": "firefox",
+    "version": "136.0",
+    "candidate": "136.0"
   },
   "buildOptions": {
     "windowsUseSymbolicLinks": false
@@ -15,17 +16,20 @@
     "stable": {
       "backgroundColor": "#FFF9E8",
       "brandShorterName": "Silica",
-      "brandShortName": "Silica Browser",
+      "brandShortName": "Silica",
       "brandFullName": "Silica Browser",
       "release": {
         "displayVersion": "0.0.1",
         "github": {
           "repo": "notaperson535/silica"
         },
-        "x86": {
-          "windowsMar": "windows.mar",
-          "macosMar": "macosIntel.mar",
-          "linuxMar": "linux.mar"
+        "archives": {
+          "windows": "windows.mar",
+          "macos-aarch64": "macos-aarch64.mar",
+          "linux": "linux.mar",
+          "macos-x64": "macos-x64.mar",
+          "windows-arm64": "windows-arm64.mar",
+          "linux-aarch64": "linux-aarch64.mar"
         }
       }
     }
@@ -35,5 +39,6 @@
       ".*\\.json"
     ],
     "licenseType": "MPL-2.0"
-  }
+  },
+  "updateHostName": "updates.silica.notaperson535.is-a.dev"
 }

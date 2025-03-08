@@ -1,0 +1,13 @@
+diff --git a/build/moz.build b/build/moz.build
+index ad78395c33bba4f6a7bd73bae2a3b6e0658ed59e..163a8e10c0281e9d3d4aa20eb6c3b053ebc21ecd 100644
+--- a/build/moz.build
++++ b/build/moz.build
+@@ -90,7 +90,7 @@ if CONFIG["MOZ_APP_BASENAME"]:
+         if CONFIG[var]:
+             appini_defines[var] = True
+ 
+-    appini_defines["MOZ_APPUPDATE_HOST"] = "aus5.mozilla.org"
++    appini_defines["MOZ_APPUPDATE_HOST"] = "updates.silica.notaperson535.is-a.dev"
+     if CONFIG["MOZ_APPUPDATE_HOST"]:
+         appini_defines["MOZ_APPUPDATE_HOST"] = CONFIG["MOZ_APPUPDATE_HOST"]
+ 

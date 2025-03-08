@@ -118,3 +118,5 @@ docs/public/
 engine/
 firefox-*/
 node_modules/
+
+*.DS_Store

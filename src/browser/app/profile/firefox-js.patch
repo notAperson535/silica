@@ -1,8 +1,8 @@
 diff --git a/browser/app/profile/firefox.js b/browser/app/profile/firefox.js
-index c5f7cf3a3bf104468580c3ab5b111e8cdfab4c83..9175fdd4327d21874fda6881f62a962b80a897f4 100644
+index 8cbe147d48e858bb8069e4627b3b3903cf8325c0..4e5613c4518f274604511fc1b4cbf28b6dfc920f 100644
 --- a/browser/app/profile/firefox.js
 +++ b/browser/app/profile/firefox.js
-@@ -2472,13 +2472,20 @@ pref("browser.migrate.interactions.passwords", false);
+@@ -2583,13 +2583,20 @@ pref("browser.migrate.interactions.passwords", false);
  
  pref("browser.migrate.preferences-entrypoint.enabled", true);
  
@@ -30,3 +30,9 @@ index c5f7cf3a3bf104468580c3ab5b111e8cdfab4c83..9175fdd4327d21874fda6881f62a962b
  
  // Enable Pocket button home panel for non link pages.
  pref("extensions.pocket.showHome", true);
+@@ -3338,3 +3345,5 @@ pref("toolkit.contentRelevancy.enabled", false);
+ pref("toolkit.contentRelevancy.ingestEnabled", false);
+ // Pref to enable extra logging for the content relevancy feature
+ pref("toolkit.contentRelevancy.log", false);
++
++#include silica.js

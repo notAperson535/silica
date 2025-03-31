@@ -9,11 +9,16 @@
 #endif
 
 // Sets to dark mode
-pref("browser.theme.toolbar-theme", 0);
+// pref("browser.theme.toolbar-theme", 0);
 
 #ifdef XP_MACOSX
 // macOS Vibrancy
 pref('widget.macos.titlebar-blend-mode.behind-window', true);
 pref('widget.macos.sidebar-blend-mode.behind-window', true);
 pref("browser.theme.native-theme", true);
+#endif
+
+#ifdef XP_WIN
+// Windows 11 Acrylic
+pref('widget.windows.mica', true)
 #endif

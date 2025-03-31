@@ -1,0 +1,13 @@
+diff --git a/widget/windows/nsWindow.cpp b/widget/windows/nsWindow.cpp
+index 209fa7536df662e24bc6739b7ac9f911fba70ff0..5e16364e8c0917546315451066d7f7a6d5aadbb3 100644
+--- a/widget/windows/nsWindow.cpp
++++ b/widget/windows/nsWindow.cpp
+@@ -2535,7 +2535,7 @@ void nsWindow::SetMicaBackdrop(bool aEnabled) {
+ 
+   // Enable Mica Alt Material if available.
+   const DWM_SYSTEMBACKDROP_TYPE type =
+-      aEnabled ? DWMSBT_TABBEDWINDOW : DWMSBT_AUTO;
++      aEnabled ? DWMSBT_TRANSIENTWINDOW : DWMSBT_AUTO;
+   DwmSetWindowAttribute(mWnd, DWMWA_SYSTEMBACKDROP_TYPE, &type, sizeof type);
+ }
+ 

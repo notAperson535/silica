@@ -5,8 +5,8 @@
   "binaryName": "silica",
   "version": {
     "product": "firefox",
-    "version": "136.0",
-    "candidate": "136.0"
+    "version": "136.0.4",
+    "candidate": "136.0.4"
   },
   "buildOptions": {
     "windowsUseSymbolicLinks": false

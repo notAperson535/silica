@@ -21,12 +21,12 @@
   --urlbar-icon-border-radius: 16px !important;
 }
 
-html {
+/* html {
   background: light-dark(
     rgba(0, 0, 0, 0.35),
     rgba(255, 255, 255, 0.35)
   ) !important;
-}
+} */
 
 /* Tab modifications */
 
